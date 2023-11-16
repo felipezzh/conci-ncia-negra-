@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz da Consciência Negra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .quiz-container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz da Consciência Negra</h1>
+    <div class="quiz-container">
+        <form id="quiz-form">
+            <!-- Nível 1 - Perguntas Fáceis -->
+            <div class="question">
+                <h2>Nível 1 - Fácil</h2>
+                <p>1. Quem foi o líder do movimento pelos direitos civis nos Estados Unidos e é famoso por seu discurso "I Have a Dream"?</p>
+                <input type="radio" name="pergunta1" value="c">a) Nelson Mandela
+                <input type="radio" name="pergunta1" value="b">b) Malcolm X
+                <input type="radio" name="pergunta1" value="a">c) Martin Luther King Jr.
+            </div>
+
+            <div class="question">
+                <p>2. Qual é o nome da cantora negra que se tornou um ícone da luta contra o racismo e é conhecida como "A Rainha do Soul"?</p>
+                <input type="radio" name="pergunta2" value="b">a) Billie Holiday
+                <input type="radio" name="pergunta2" value="c">b) Nina Simone
+                <input type="radio" name="pergunta2" value="a">c) Aretha Franklin
+            </div>
+
+            <div class="question">
+                <p>3. Quem foi o líder do movimento negro no Brasil e fundador do Quilombo dos Palmares?</p>
+                <input type="radio" name="pergunta3" value="c">a) Zumbi dos Palmares
+                <input type="radio" name="pergunta3" value="b">b) Chico Rei
+                <input type="radio" name="pergunta3" value="a">c) Tiradentes
+            </div>
+
+            <!-- Nível 2 - Perguntas Médias -->
+            <div class="question">
+                <h2>Nível 2 - Médio</h2>
+                <p>4. Qual escritor brasileiro é autor do livro "O Quarto de Despejo", que relata a vida em uma favela no Rio de Janeiro?</p>
+                <input type="radio" name="pergunta4" value="c">a) Lima Barreto
+                <input type="radio" name="pergunta4" value="b">b) Jorge Amado
+                <input type="radio" name="pergunta4" value="a">c) Carolina Maria de Jesus
+            </div>
+
+            <!-- Adicione mais perguntas do Nível 2 aqui -->
+
+            <!-- Nível 3 - Perguntas Difíceis -->
+            <div class="question">
+                <h2>Nível 3 - Difícil</h2>
+                <p>5. Qual é o nome do líder do movimento negro Malcom X, que pregava a autodefesa e a resistência à opressão racial?</p>
+                <input type="radio" name="pergunta5" value="c">a) Martin Luther King Jr.
+                <input type="radio" name="pergunta7" value="b">b) Marcus Garvey
+                <input type="radio" name="pergunta7" value="a">c) Malcolm Little
+            </div>
+
+            <!-- Adicione mais perguntas do Nível 3 aqui -->
+
+            <button type="submit">Verificar Resultado</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('quiz-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let score = 0;
+
+            // Verificar as respostas
+            if (form.pergunta1.value === "c") {
+                score++;
+            }
+            if (form.pergunta2.value === "c") {
+                score++;
+            }
+            if (form.pergunta3.value === "c") {
+                score++;
+            }
+            // Adicione verificação para outras perguntas
+
+            // Exibir a pontuação final
+            alert("Sua pontuação: " + score + " de 9");
+        });
+    </script>
+</body>
+</html>
